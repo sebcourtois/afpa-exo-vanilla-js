@@ -1,0 +1,19 @@
+section, article {
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.items-group {
+    margin: 6px;
+}
+
+.item {
+    margin: 6px;
+    padding: 6px;
+}
+
+.item-field-editor {
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 6px
+}
