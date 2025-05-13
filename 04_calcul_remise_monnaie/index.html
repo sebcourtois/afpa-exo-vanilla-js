@@ -2,20 +2,29 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Calcul monnaie à rendre</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<form>
-    <div>
-        <label for="amount_to_pay">A régler:</label>
-        <input id="amount_to_pay" type="number" value="0">
-    </div>
-    <div>
-        <label for="amount_received">Payé:</label>
-        <input id="amount_received" type="number" value="0">
-    </div>
-</form>
-<div id="money_change"></div>
+<main class="container">
+    <form>
+        <div class="form-entry">
+            <label for="amount_to_pay">A régler:</label>
+            <input id="amount_to_pay" type="number" value="0">
+        </div>
+        <div class="form-entry">
+            <label for="amount_received">Payé:</label>
+            <input id="amount_received" type="number" value="0">
+        </div>
+        <div class="form-entry">
+            <div id="money_change"></div>
+        </div>
+        <div class="form-entry button-box">
+            <button type="submit" id="calculation_button">Calculer</button>
+        </div>
+    </form>
+</main>
 </body>
 </html>

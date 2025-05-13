@@ -1,5 +1,6 @@
 const toPayElem = document.querySelector("#amount_to_pay")
 const receivedElem = document.querySelector("#amount_received")
+const calculationButton = document.querySelector("#calculation_button")
 
 function makeChange(amount) {
     let nbrInTen = 0
@@ -29,20 +30,21 @@ function renderMoneyChange(moneyChange) {
 </ul>`.trim()
 }
 
-function onFormChange() {
+function onFormSubmitted(event) {
+    event.preventDefault()
+
     const amountToPay = toPayElem.value
     const amountReceived = receivedElem.value
 
     const amountToReturn = amountReceived - amountToPay
-    if (amountToReturn <= 0) return
-
     const moneyChange = makeChange(amountToReturn)
     // console.log(amountToReturn, moneyChange)
 
-    const html = `<p>${amountToReturn} € à rendre:</p>`
-    const changeElem = document.querySelector("#money_change")
-    changeElem.innerHTML = html + renderMoneyChange(moneyChange)
+    let html = `<p>Rien à rendre</p>`
+    if (amountToReturn > 0) {
+        html = `<p>${amountToReturn} € à rendre:</p>` + renderMoneyChange(moneyChange)
+    }
+    document.querySelector("#money_change").innerHTML = html
 }
 
-toPayElem.addEventListener("change", onFormChange)
-receivedElem.addEventListener("change", onFormChange)
+calculationButton.addEventListener("click", onFormSubmitted)
