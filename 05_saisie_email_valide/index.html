@@ -2,16 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Saisie adresse email</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="container">
 <form>
-    <div>
+    <div class="form-entry">
         <label for="email_input">Votre email:</label>
         <input type="text" id="email_input" required>
     </div>
-    <button id="submit_button" type="submit">Valider</button>
+    <div class="form-entry button-box">
+        <button id="submit_button" type="submit">Vérifier</button>
+    </div>
 </form>
 </body>
 </html>
