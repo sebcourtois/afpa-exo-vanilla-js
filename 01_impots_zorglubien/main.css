@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 500px;
+    height: auto;
+    border: dimgrey solid 2px;
+    border-radius: 6px;
+    margin-inline: auto;
+    margin-block: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.form-entry {
+    margin-block: 20px;
+}
+

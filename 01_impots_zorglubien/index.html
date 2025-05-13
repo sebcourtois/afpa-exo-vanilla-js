@@ -2,26 +2,34 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Impôts Zorglubien</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<p>En tant que citoyen de Zorglub...</p>
-<form>
-    <fieldset>
-        <legend>Vous êtes...</legend>
-        <div>
-            <input type="radio" id="male_option" name="gender_options" value="male" required/>
-            <label for="male_option">Homme</label>
+<main class="container">
+    <p>En tant que citoyen de Zorglub...</p>
+    <form>
+        <fieldset class="form-entry">
+            <legend>Vous êtes...</legend>
+            <div>
+                <input type="radio" id="male_option" name="gender_options" value="male" required/>
+                <label for="male_option">Homme</label>
+            </div>
+            <div>
+                <input type="radio" id="female_option" name="gender_options" value="female"/>
+                <label for="female_option">Femme</label>
+            </div>
+        </fieldset>
+        <div class="form-entry">
+            <label for="age_input">Agé de:</label>
+            <input type="number" id="age_input" name="age" min="1" max="200" required>
         </div>
-        <div>
-            <input type="radio" id="female_option" name="gender_options" value="female"/>
-            <label for="female_option">Femme</label>
-        </div>
-    </fieldset>
-    <label for="age_input">Agé de:</label><input type="number" id="age_input" name="age" min="1" max="200" required>
-    <input type="submit" id="check_button" value="Vérifier">
-</form>
-<p id="taxable_status"></p>
+        <div class="form-entry"><p id="taxable_status"></p></div>
+        <div class="button-box"><input type="submit" id="check_button" value="Vérifier"></div>
+    </form>
+
+</main>
 </body>
 </html>
